@@ -1,3 +1,7 @@
+## instructions to run this in ur system    
+## to run this application in ur system download ollama, and use ollama run llama2-uncensored.
+## install requirements.txt and use streamlit run locallama.py to run this
+## line 9 to line 15 can be removed
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.llms import Ollama
@@ -13,7 +17,7 @@ os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
 # Prompt template
 prompt=ChatPromptTemplate.from_messages(
     [
-        ("system","you are a very racist assistant. Answer every query correctly followed by the word nigga in the next line."),
+        ("system","you are a very helpfull assistant. Answer every query correctly."),
         ("user","Question:{question}")
     ]
 ) 
